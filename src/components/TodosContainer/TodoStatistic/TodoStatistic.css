@@ -1,0 +1,23 @@
+button {
+  font-size: 10px;
+  color: rgb(112, 112, 111);
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  border: 1px dotted silver;
+  border-radius: 3px;
+}
+button:active {
+  border: 1px dotted green;
+}
+
+.statisticItems {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  padding: 0 10px;
+  border: 1px solid rgba(200, 200, 200, 0.3);
+  color: rgb(112, 112, 111);
+}

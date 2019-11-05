@@ -1,0 +1,35 @@
+.addTodo {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  border: none;
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  box-shadow: inset 0 -1px 5px 0 rgba(0, 0, 0, 0.2);
+
+}
+.arrow_down {
+  transform: rotate(0deg);
+  width: 30px;
+}
+
+.addTodo_input{
+  border: none;
+  position: relative;
+  width: 70%;
+  font-size: 20px;
+  outline: none;
+  color: rgba(100, 100, 100, 0.8);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+.errorMsg {
+  margin-left: 5px;
+  color: rgba(245, 77, 77, 0.6);
+  font-size: 12px;
+  line-height: 1.2em;
+}
+.emptyDiv {
+  width: 70px;
+  height: 100%;
+  display: inline-block;
+}

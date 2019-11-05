@@ -1,0 +1,55 @@
+.darkgray {
+  color: darkgray;
+}
+
+.silver {
+  color: silver;
+}
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  left: 10px;
+  height: 45px;
+  border: 1px solid rgba(200, 200, 200, 0.3);
+}
+.todoItem span {
+  font-size: 30px;
+  line-height: 40px;
+  color: rgba(141, 141, 140, 0.808);
+}
+
+.todoItem:hover .delBtn {
+  display: initial;
+}
+
+.todoItem__label {
+  display: flex;
+  width: 100%;
+}
+
+.delBtn {
+  display: none;
+  float: right;
+  margin: 5px;
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+  font-size: 22px;
+  line-height: 28px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: rgba(153, 48, 48, 0.4);
+  border: 1px solid rgba(233, 233, 233, 0.4);
+  transition: color 0.2s cubic-bezier(0.6, -0.28, 0.74, 0.05);
+}
+
+.inputChecked {
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  margin: 7px;
+}
+
+.checkedText {
+  text-decoration: line-through;
+}

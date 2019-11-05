@@ -1,0 +1,18 @@
+.notification {
+  position: absolute;
+  text-align: center;
+  width: 200px;
+  left: calc(100% - 250px);
+  top: 50px;
+  padding: 10px;
+  /* visibility: hidden; */
+  background-color: rgba(205, 248, 205, 0.76);
+  color: rgba(72, 75, 245, 0.753);
+  border: 9px solid rgba(183, 250, 183, 0.705);
+  border-radius: 7px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
