@@ -1,6 +1,6 @@
 import React from 'react';
 import './registration.css';
-import { Formik } from 'formik';
+//import { Formik } from 'formik';
 
 
 
@@ -17,6 +17,7 @@ class Registration extends React.Component {
         <div class="bold-text">Input your password</div>
         <input placeholder="password" class="registration__input"></input>
         <button class="registration__btn">Register</button>
+        <br /><a href='/'>Home page</a><br />
       </form>);
   }
 }

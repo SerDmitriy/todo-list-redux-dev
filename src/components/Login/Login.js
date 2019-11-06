@@ -74,6 +74,8 @@ class Login extends React.Component {
           validationSchema={this.state.validationSchema}
           onSubmit={this.formikHandler}
         />
+      <a href='/'>Home page</a><br/>
+
       </div>
     );
   }

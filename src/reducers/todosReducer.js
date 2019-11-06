@@ -61,7 +61,6 @@ export default (state = initialState, action) => {
         loading: true
       }
     case 'REMOVE_TODO_SUCCESS':
-      console.log('reducers remove todo, payload:  ', action.payload)
       return {
         ...state,
         todos: [...state.todos].filter(item => item._id !== action.payload._id),

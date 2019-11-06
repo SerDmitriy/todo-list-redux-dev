@@ -1,6 +1,7 @@
 import React from 'react';
 import Registration from '../components/Registration/Registration.js';
 import Login from '../components/Login/Login';
+import HomePage from '../components/homePage/HomePage'
 
 export default [
   {
@@ -16,11 +17,11 @@ export default [
   {
     exact: true,
     path: '/about',
-    component: () => <div>{"Map of our page: /about --- /registration --- /login"}</div>
+    component: () => <div>{"About page in process"}<br /><a href='/'>Home page</a></div>
   },
   {
     exact: true,
     path: '/',
-    component: () => <div>{"Map of our page: /about --- /registration --- /login"}</div>
+    component: HomePage,
   },
 ]

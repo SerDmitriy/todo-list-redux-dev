@@ -16,6 +16,6 @@ export const actionsCreator = (statuses, actionTypes) => {
     )
   })
   
-  console.dir(actions)
+  //console.dir(actions)
   return actions;
 }

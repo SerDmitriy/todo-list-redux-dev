@@ -42,7 +42,7 @@ export const removeTodo = (payload, callback) => {
     dispatch(actions.REMOVE_TODO.REQUEST())
     api.delete(`${API_URLS.TODO}/${payload._id}`)
       .then(res => {
-        console.log('res of deleting = ', res.data)
+        // console.log('res of deleting = ', res.data)
         dispatch(actions.REMOVE_TODO.SUCCESS(res.data))
       })
       .catch(err => {

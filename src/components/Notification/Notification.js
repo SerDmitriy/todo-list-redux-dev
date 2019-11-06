@@ -15,9 +15,9 @@ class Notification extends React.Component {
   componentDidMount() {
     this.findErrors()
   }
-  componentWillReceiveProps(newProps) {
-    this.findErrors()
-  }
+  // componentWillReceiveProps(newProps) {
+  //   this.findErrors()
+  // }
 
   findErrors = () => {
     const newState = this.props.combineState
@@ -33,7 +33,7 @@ class Notification extends React.Component {
     return showPortal || errors.length ? ReactDOM.createPortal(
       <div className="notification" key='notific'>
           {showPortal ? children : errors.map(err => {
-            return (<div>{err}</div>)
+            return (<div key={err}>{err}</div>)
           })}
       </div> 
       ,

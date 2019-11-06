@@ -6,7 +6,7 @@ export default [
   {
     exact: true,
     path: '/user',
-    component: () => <div>{'One user information'}</div>
+    component: () => <div>{'One user information'}<br /><a href='/'>Home page</a></div>
   },
   {
     exact: true,
@@ -16,11 +16,11 @@ export default [
   {
     exact: true,
     path: '/todos',
-    component: () => <div>{"/todos page"}</div>
+    component: () => <div>{"/todos page"}<br /><a href='/'>Home page</a></div>
   },  
   {
     exact: true,
     path: '/user/statistic',
-    component: () => <div>{"/user/statistic"}</div>
+    component: () => <div>{"/user/statistic"}<br /><a href='/'>Home page</a></div>
   },
 ]

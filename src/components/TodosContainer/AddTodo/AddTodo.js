@@ -16,7 +16,7 @@ class AddTodo extends React.Component {
 
   validateInput = value => {
     this.setState({ errorMsg: '' });
-    const re = /^[a-zA-Z0-9-=/!/?@]{2,10}$/;
+    const re = /^[a-z/ A-Z0-9-=/!/?@]{2,10}$/;
     if (!re.test(String(value))) {
       this.setState({ errorMsg: TEXT_ERR_MSG.textErrMain });
     }

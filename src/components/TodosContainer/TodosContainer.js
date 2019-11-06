@@ -34,8 +34,8 @@ class TodosContainer extends React.Component {
           <div>Created by <b>petehunt</b></div>
           <div>Part of <b>TodoMVC</b></div>
         </div>
+        <a href='/'>Home page</a><br />
       </div>
-
     )
   }
 }
