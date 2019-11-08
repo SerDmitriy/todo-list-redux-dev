@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './AddTodo.css';
 import { TEXT_ERR_MSG } from '../../../constants';
-import { addNewTodo } from '../../../services/todosService'
+import { addNewTodo } from '../../../services/todosService';
 
 
 class AddTodo extends React.Component {
@@ -10,13 +10,13 @@ class AddTodo extends React.Component {
     super(props)
     this.state = {
       todoValue: '',
-      errorMsg: TEXT_ERR_MSG.textErrReq
+      errorMsg: '',
     }
   }
 
   validateInput = value => {
     this.setState({ errorMsg: '' });
-    const re = /^[a-z/ A-Z0-9-=/!/?@]{2,10}$/;
+    const re = /^[a-z/ A-Z0-9-=/!/?@]{2,20}$/;
     if (!re.test(String(value))) {
       this.setState({ errorMsg: TEXT_ERR_MSG.textErrMain });
     }

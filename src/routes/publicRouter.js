@@ -1,7 +1,7 @@
-import React from 'react';
 import Registration from '../components/Registration/Registration.js';
 import Login from '../components/Login/Login';
 import HomePage from '../components/homePage/HomePage'
+import SignIn from '../components/Registration/SignIn'
 
 export default [
   {
@@ -16,8 +16,8 @@ export default [
   },
   {
     exact: true,
-    path: '/about',
-    component: () => <div>{"About page in process"}<br /><a href='/'>Home page</a></div>
+    path: '/signIn',
+    component: SignIn
   },
   {
     exact: true,
