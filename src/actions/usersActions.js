@@ -1,6 +1,6 @@
-import { actionsCreator } from '../utilites/index';
+import { actionsCreator } from '../utilites/index'
 
-const statuses = ['REQUEST', 'SUCCESS', 'FAILED', 'CLEAR'];
-const actionTypes = ['ADD_USER', 'REMOVE_USER'];
+const statuses = ['REQUEST', 'SUCCESS', 'FAILED', 'CLEAR']
+const actionTypes = ['ADD_USER', 'REMOVE_USER']
 
-export default actionsCreator(statuses, actionTypes);
+export default actionsCreator(statuses, actionTypes)
