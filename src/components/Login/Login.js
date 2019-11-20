@@ -18,6 +18,10 @@ class Login extends React.Component {
 					.min(8, `8 + ${TEXT_ERR_MSG.minSymbols}`)
 					.required(TEXT_ERR_MSG.textErrReq),
 			}),
+			initialValues: {
+				email: '',
+				password: '',
+			},
 		}
 	}
 
@@ -35,11 +39,13 @@ class Login extends React.Component {
 	}
 
 	render() {
+		const { initialValues, validationSchema } = this.state
+
 		return (
 			<div className='login'>
 				<h1>Log In</h1>
 				<Formik
-					initialValues={{ email: '', password: '' }}
+					initialValues={initialValues}
 					render={({ errors, touched, values: { email, password }, isValid, handleChange, setFieldTouched }) => (
 						<Form>
 							<label htmlFor='login__email'>Input your email</label>
@@ -50,7 +56,8 @@ class Login extends React.Component {
 								value={email}
 								onChange={e => this.handlerField(e, handleChange, setFieldTouched)}
 							/>
-							<ErrorMessage name='email' component='div' />
+							<ErrorMessage className='error-message' name='email' component='div' />
+							<br />
 							<label htmlFor='login__pass'>password:</label>
 							<Field
 								type='password'
@@ -59,13 +66,15 @@ class Login extends React.Component {
 								value={password}
 								onChange={e => this.handlerField(e, handleChange, setFieldTouched)}
 							/>
-							<ErrorMessage name='password'>{errors => <div className='error'>{errors}</div>}</ErrorMessage>
+							<ErrorMessage className='error-message' name='password'>
+								{errors => <div className='error'>{errors}</div>}
+							</ErrorMessage>
 							<button type='submit' disabled={!isValid}>
 								Submit
 							</button>
 						</Form>
 					)}
-					validationSchema={this.state.validationSchema}
+					validationSchema={validationSchema}
 					onSubmit={this.formikHandler}
 				/>
 				<a href='/'>Home page</a>
